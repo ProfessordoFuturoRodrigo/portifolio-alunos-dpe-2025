@@ -90,7 +90,7 @@ const classesData = [
     turma: '3º B',
     teams: [
       { name: 'Desenvolvedora de Games', projects: [
-        { title: 'Jogos para mobile, PC e consoles', url: 'https://example.com/jardim', students: ['Carlos Júnior','Felype','Gabriel','Jamilly Vitória','Jean Matheus','Maria Luara','Marjory','Sthefane'] }
+        { title: 'Jogos para mobile, PC e consoles', url: 'https://sthefanebrito.github.io/Projeto-kitty-/', students: ['Carlos Júnior','Felype','Gabriel','Jamilly Vitória','Jean Matheus','Maria Luara','Marjory','Sthefane'] }
       ] }
       ,
       { name: 'Portal de Ensino de Educação Financeira ', projects: [
@@ -231,4 +231,5 @@ Sugestões de publicação dos projetos dos alunos:
 
 Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
+
 */
