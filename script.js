@@ -6,9 +6,8 @@ const classesData = [
   {
     turma: '1º A',
     teams: [
-      { name: 'Time Alpha', projects: [
-        { title: 'Site Institucional - Escola', url: 'https://example.com/aluno1', students: ['Ana Silva','Bruno'] },
-        { title: 'Jogo da Velha (JS)', url: '', students: ['Carlos'] }
+      { name: 'Site para Ensino de Robótica Educacional ', projects: [
+        { title: 'Cursos e kits para escolas e estudantes', url: 'https://example.com/aluno1', students: ['Ana Karolyna','Evelyn Karolline','Lara Cristina','Renan'] },
       ]},
       { name: 'Time Beta', projects: [
         { title: 'Portfólio Pessoal', url: 'https://example.com/aluno2', students: ['Daniela','Eduardo'] }
@@ -233,3 +232,4 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
