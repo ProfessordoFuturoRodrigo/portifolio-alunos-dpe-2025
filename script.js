@@ -89,8 +89,12 @@ const classesData = [
   {
     turma: '3º B',
     teams: [
-      { name: 'Time IoT', projects: [
-        { title: 'Automação do Jardim', url: 'https://example.com/jardim', students: ['Helena','Iago'] }
+      { name: 'Desenvolvedora de Games', projects: [
+        { title: 'Jogos para mobile, PC e consoles', url: 'https://example.com/jardim', students: ['Carlos Júnior','Felype','Gabriel','Jamilly Vitória','Jean Matheus','Maria Luara','Marjory','Sthefane'] }
+      ] }
+      ,
+      { name: 'Portal de Ensino de Educação Financeira ', projects: [
+        { title: 'Conteúdo sobre investimentos e gestão financeira', url: 'https://theus450.github.io/Projeto-EvoCoin/', students: ['Daniel','Hericky','Matheus','Paulo Ricardo','Rayssa Thayná','Yasmim'] }
       ] }
     ]
   }
