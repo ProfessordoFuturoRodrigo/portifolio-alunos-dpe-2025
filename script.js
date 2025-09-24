@@ -6,23 +6,34 @@ const classesData = [
   {
     turma: '1º A',
     teams: [
-      { name: 'Site para Ensino de Robótica Educacional ', projects: [
-        { title: 'Cursos e kits para escolas e estudantes', url: 'https://example.com/aluno1', students: ['Ana Karolyna','Evelyn Karolline','Lara Cristina','Renan'] },
+      { name: 'Livraria Digital', projects: [
+        { title: 'Venda de e-books e audiolivros', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Paula','Dhovana','Larissa','Pedro Lucas','Talya'] },
       ]},
-      { name: 'Time Beta', projects: [
-        { title: 'Portfólio Pessoal', url: 'https://example.com/aluno2', students: ['Daniela','Eduardo'] }
+      { name: 'Agência de Turismo para PCDs', projects: [
+        { title: 'Roteiros acessíveis para pessoas com deficiência', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Cristina','Diêniffer','Helena','Henry','Kayon','Maria Vitória','Thiesa','Victor Ricardo'] }
+      ]},
+       { name: 'Startup de Economia Circular', projects: [
+        { title: 'Reaproveitamento e reciclagem de materiais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Projeto Abandonador'] }
+      ] },
+       { name: 'Plataforma de Aulas para Surdos e Mudos', projects: [
+        { title: 'Educação em Libras', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Emilly Vitória','Heithor','Isabella','Kaique Antôny'] }
+      ] },
+       { name: 'Empresa de Desenvolvimento de Software', projects: [
+        { title: 'Aplicativos web e mobile', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Alexandre','Anny Luiza','Fhaitton','Hevellyn','Lucas Antônio','Luiz Felipe','Matheus'] }
+      ] },
+       { name: 'E-commerce de Produtos Veganos', projects: [
+        { title: 'Alimentação, cosméticos e roupas sem origem animal', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Alencar','Dyêmisson','Estefany'] }
       ] }
     ]
   },
     {
     turma: '1º B',
     teams: [
-      { name: 'Time Alpha', projects: [
-        { title: 'Site Institucional - Escola', url: 'https://example.com/aluno1', students: ['Ana Silva','Bruno'] },
-        { title: 'Jogo da Velha (JS)', url: '', students: ['Carlos'] }
-      ]},
-      { name: 'Time Beta', projects: [
-        { title: 'Portfólio Pessoal', url: 'https://example.com/aluno2', students: ['Daniela','Eduardo'] }
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['','','','','','','',''] }
+      ] },
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['','','','','','','',''] }
       ] }
     ]
   },
@@ -232,4 +243,5 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
