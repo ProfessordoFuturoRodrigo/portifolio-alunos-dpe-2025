@@ -29,11 +29,26 @@ const classesData = [
     {
     turma: '1º B',
     teams: [
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['','','','','','','',''] }
+      { name: 'Site para Ensino de Robótica Educacional', projects: [
+        { title: 'Cursos e kits para escolas e estudante', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Karolyna','Evelyn Karolline','Lara','Renan'] }
       ] },
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['','','','','','','',''] }
+      { name: 'Academia para Pessoas com Deficiência', projects: [
+        { title: 'Treinamento adaptado e acessibilidade', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anna Luiza','Anny Gabrielle','Maria Rita','Nycole','Sofia'] }
+      ] },
+      { name: 'Aplicativo de Rotinas Saudáveis', projects: [
+        { title: 'Exercícios, dieta e hidratação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['David Wesley','Lucas Felipe','Lucas Gabryel','Wallace','Maria Paula','Tauane','Thaylla'] }
+      ] },
+      { name: 'Projeto de Alfabetização para Adultos', projects: [
+        { title: 'Aulas online para ensino básico', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Luiza','Anny Stefanny','Marcela','Maria Paula','Tauane','Thaylla'] }
+      ] },
+      { name: 'Startup de Inteligência Artificial', projects: [
+        { title: 'Serviços de automação e IA', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Cloves','Felipe','Keven','Rafael','Yusseff Nattan'] }
+      ] },
+      { name: 'Espaço de Coworking Tecnológico', projects: [
+        { title: 'Localização de vagas para startups', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Bárbara','Thania','Warley'] }
+      ] },
+      { name: 'Loja de Roupas Sustentáveis', projects: [
+        { title: 'Moda ecológica e materiais recicláveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['PROJETO ABANDONADO'] }
       ] }
     ]
   },
@@ -243,5 +258,6 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
 
