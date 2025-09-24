@@ -55,73 +55,101 @@ const classesData = [
     {
     turma: '1º C',
     teams: [
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fernando','Luiz Felipe','Vinícius'] }
+      { name: 'Consultoria em Cibersegurança', projects: [
+        { title: 'proteção de dados e segurança digital', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fernando','Luiz Felipe','Vinícius'] }
       ]},
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Arthur','Erick','Geraldo','Gustavo','Lukas Gabriel','Murilo Max'] }
+      { name: 'Centro de Reforço Escolar Online', projects: [
+        { title: 'apoio em matemática, português e ciências', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Arthur','Erick','Geraldo','Gustavo','Lukas Gabriel','Murilo Max'] }
       ]},
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anna Beatriz','Fillipe Gabriel','Kayky','Thamili'] }
+      { name: 'Plataforma de Psicólogos Online', projects: [
+        { title: 'atendimento psicológico remoto', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anna Beatriz','Fillipe Gabriel','Kayky','Thamili'] }
       ]},
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Lucas José','Natália','Pedro Henrique'] }
+      { name: 'Loja de Componentes Eletrônicos', projects: [
+        { title: 'venda de placas, sensores e microcontroladores', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Lucas José','Natália','Pedro Henrique'] }
       ]},
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Amanda'] }
+      { name: 'Loja de Equipamentos para Fotografia', projects: [
+        { title: 'câmeras, acessórios e iluminação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Amanda'] }
       ]},
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fellipe','Lucas Lubachevski','Mauricio','Vyctor Augusto','Vytor'] }
+      { name: 'Portal de Notícias Comunitárias', projects: [
+        { title: 'informações locais e jornalismo independente', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fellipe','Lucas Lubachevski','Mauricio','Vyctor Augusto','Vytor'] }
       ]},
-      { name: '', projects: [
-        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['João Vitor','Yana'] }
+      { name: 'Loja de Brinquedos Educativos', projects: [
+        { title: 'para desenvolvimento infantil', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['João Vitor','Yana'] }
       ]}
     ]
   },
     {
     turma: '2º A',
     teams: [
-      { name: 'Time Alpha', projects: [
-        { title: 'Site Institucional - Escola', url: 'https://example.com/aluno1', students: ['Ana Silva','Bruno'] },
-        { title: 'Jogo da Velha (JS)', url: '', students: ['Carlos'] }
+      { name: 'Empresa de Soluções em IoT (Internet das Coisas)', projects: [
+        { title: 'Automação residencial e industrial', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Elcio','Fernanda','Italo Ryan','Marcos','Ysabella'] }
       ]},
-      { name: 'Time Beta', projects: [
-        { title: 'Portfólio Pessoal', url: 'https://example.com/aluno2', students: ['Daniela','Eduardo'] }
-      ] }
+      { name: 'Pet Shop Online', projects: [
+        { title: 'Produtos e serviços para animais de estimação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Heitor','Kauã','Marcos Rangel','Sidney'] }
+      ]},
+      { name: 'Plataforma de Cursos Online', projects: [
+        { title: 'EAD para cursos técnicos e profissionalizantes', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Danillo Cristian','Eduardo','José Rodolpho','Kayo Gabryel'] }
+      ]},
+      { name: 'Biblioteca Digital Comunitária', projects: [
+        { title: 'Acesso a livros gratuitos e acessíveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Clara','Davi','Izadora','Kawane','Nicolly'] }
+      ]},
+      { name: 'Clínica de Fisioterapia e Reabilitação', projects: [
+        { title: 'Atendimento especializado para idosos e atletas', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Luísa','Daniel','Geovanna Vitória','Tawany'] }
+      ]}
     ]
   },
   {
     turma: '2º B',
     teams: [
-      { name: 'Time CTF', projects: [
-        { title: 'Mini-CTF (apresentação)', url: '', students: ['Fábio','Gustavo'] }
-      ] }
+      { name: 'Plataforma de Bolsas de Estudo', projects: [
+        { title: 'Conexão de estudantes com oportunidades acadêmicas', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Danilo','Erycka','Gustavo','Laila Mireli'] }
+      ]},
+      { name: 'Papelaria Criativa', projects: [
+        { title: 'Materiais escolares e personalizados', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Clara','Carlos Eduardo','Luys Felype','Maria Eduarda','Wagner'] }
+      ]},
+      { name: 'Centro de Terapia Holística', projects: [
+        { title: 'Meditação, yoga e acupuntura', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Eduardo Góes','Fernando Felype'] }
+      ]},
+      { name: 'Agência de Marketing Digital', projects: [
+        { title: 'Criação de campanhas, SEO e redes sociais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Igo','Silver','Tony'] }
+      ]},
+      { name: 'Escola de Música Inclusiva', projects: [
+        { title: 'Ensino de música para pessoas com deficiência', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Elóah','Emilly','Rayanny'] }
+      ]}
     ]
   },
     {
     turma: '2º C',
     teams: [
-      { name: 'Time Alpha', projects: [
-        { title: 'Site Institucional - Escola', url: 'https://example.com/aluno1', students: ['Ana Silva','Bruno'] },
-        { title: 'Jogo da Velha (JS)', url: '', students: ['Carlos'] }
+      { name: 'Centro de Estética e Cuidados Pessoais', projects: [
+        { title: 'Serviços de beleza e bem-estar', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Carlos Victor','Kaue Henrique','Osmar','Wilkner Felipe'] }
       ]},
-      { name: 'Time Beta', projects: [
-        { title: 'Portfólio Pessoal', url: 'https://example.com/aluno2', students: ['Daniela','Eduardo'] }
-      ] }
+      { name: 'Consultoria em Blockchain e Criptomoedas', projects: [
+        { title: 'Segurança e investimento em criptografia', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Daniel','Luiz','Pedro Henrique','Reminton','','','',''] }
+      ]},
+      { name: 'Loja de Cosméticos Naturais', projects: [
+        { title: 'Produtos orgânicos e ecológicos', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Gabriela','Kayky','Maria Eduarda','Pabline','Roberta Heloar','Ruan Gabriel'] }
+      ]},
+      { name: 'Escola de Idiomas para Baixa Renda', projects: [
+        { title: 'Aulas gratuitas ou a preços acessíveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Divino','Izabelly Maria','Wryel Kaio'] }
+      ]},
+      { name: 'Mercado de Produtos Orgânicos', projects: [
+        { title: 'Hortifrúti e produtos naturais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Cibele','Jhully Emilly','Sthefany'] }
+      ]}
     ]
   },
     {
     turma: '3º A',
     teams: [
       { name: 'Clube de Assinatura de Café Artesanal', projects: [
-        { title: 'Envio mensal de cafés especiais', url: 'https://example.com/aluno1', students: ['Carlos Eduardo','João Vitor','Luiz Gustavo','Pablo Pyetro','Samuel'] },
+        { title: 'Envio mensal de cafés especiais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Carlos Eduardo','João Vitor','Luiz Gustavo','Pablo Pyetro','Samuel'] },
       ]},
       { name: 'Aplicativo de Nutrição Personalizada', projects: [
-        { title: 'Planos alimentares baseados no perfil do usuário', url: 'https://example.com/aluno2', students: ['Anny Gabrielly','Carlos Alexandre','Felipe Gabriel','Kaio Miguel','Maria Eduarda','Pedro Matheus','Yasmim Victória'] }
+        { title: 'Planos alimentares baseados no perfil do usuário', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anny Gabrielly','Carlos Alexandre','Felipe Gabriel','Kaio Miguel','Maria Eduarda','Pedro Matheus','Yasmim Victória'] }
       ] }
       ,
       { name: 'Escola de Programação para Jovens', projects: [
-        { title: 'Ensino de lógica de programação e desenvolvimento', url: 'https://example.com/aluno3', students: ['Cauã Fernando','Daniel','Jhonathan','Kayky','Marcela Kaillane'] }
+        { title: 'Ensino de lógica de programação e desenvolvimento', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Cauã Fernando','Daniel','Jhonathan','Kayky','Marcela Kaillane'] }
       ] }
     ]
   },
@@ -272,6 +300,7 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
 
 
