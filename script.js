@@ -13,7 +13,7 @@ const classesData = [
         { title: 'Roteiros acessíveis para pessoas com deficiência', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Cristina','Diêniffer','Helena','Henry','Kayon','Maria Vitória','Thiesa','Victor Ricardo'] }
       ]},
        { name: 'Startup de Economia Circular', projects: [
-        { title: 'Reaproveitamento e reciclagem de materiais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Projeto Abandonador'] }
+        { title: 'Reaproveitamento e reciclagem de materiais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['PROJETO ABANDONADO!'] }
       ] },
        { name: 'Plataforma de Aulas para Surdos e Mudos', projects: [
         { title: 'Educação em Libras', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Emilly Vitória','Heithor','Isabella','Kaique Antôny'] }
@@ -48,20 +48,34 @@ const classesData = [
         { title: 'Localização de vagas para startups', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Bárbara','Thania','Warley'] }
       ] },
       { name: 'Loja de Roupas Sustentáveis', projects: [
-        { title: 'Moda ecológica e materiais recicláveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['PROJETO ABANDONADO'] }
+        { title: 'Moda ecológica e materiais recicláveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['PROJETO ABANDONADO!'] }
       ] }
     ]
   },
     {
     turma: '1º C',
     teams: [
-      { name: 'Time Alpha', projects: [
-        { title: 'Site Institucional - Escola', url: 'https://example.com/aluno1', students: ['Ana Silva','Bruno'] },
-        { title: 'Jogo da Velha (JS)', url: '', students: ['Carlos'] }
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fernando','Luiz Felipe','Vinícius'] }
       ]},
-      { name: 'Time Beta', projects: [
-        { title: 'Portfólio Pessoal', url: 'https://example.com/aluno2', students: ['Daniela','Eduardo'] }
-      ] }
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Arthur','Erick','Geraldo','Gustavo','Lukas Gabriel','Murilo Max'] }
+      ]},
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anna Beatriz','Fillipe Gabriel','Kayky','Thamili'] }
+      ]},
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Lucas José','Natália','Pedro Henrique'] }
+      ]},
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Amanda'] }
+      ]},
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fellipe','Lucas Lubachevski','Mauricio','Vyctor Augusto','Vytor'] }
+      ]},
+      { name: '', projects: [
+        { title: '', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['João Vitor','Yana'] }
+      ]}
     ]
   },
     {
@@ -258,6 +272,7 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
 
 
