@@ -36,7 +36,7 @@ const classesData = [
         { title: 'Treinamento adaptado e acessibilidade', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anna Luiza','Anny Gabrielle','Maria Rita','Nycole','Sofia'] }
       ] },
       { name: 'Aplicativo de Rotinas Saudáveis', projects: [
-        { title: 'Exercícios, dieta e hidratação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['David Wesley','Lucas Felipe','Lucas Gabryel','Wallace','Maria Paula','Tauane','Thaylla'] }
+        { title: 'Exercícios, dieta e hidratação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['David Wesley','Lucas Felipe','Lucas Gabryel','Wallace'] }
       ] },
       { name: 'Projeto de Alfabetização para Adultos', projects: [
         { title: 'Aulas online para ensino básico', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Luiza','Anny Stefanny','Marcela','Maria Paula','Tauane','Thaylla'] }
@@ -300,6 +300,7 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
 
 
