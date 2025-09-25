@@ -145,7 +145,7 @@ const classesData = [
         { title: 'Envio mensal de cafés especiais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Carlos Eduardo','João Vitor','Luiz Gustavo','Pablo Pyetro','Samuel'] },
       ]},
       { name: 'Aplicativo de Nutrição Personalizada', projects: [
-        { title: 'Planos alimentares baseados no perfil do usuário', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anny Gabrielly','Carlos Alexandre','Felipe Gabriel','Kaio Miguel','Maria Eduarda','Pedro Matheus','Yasmim Victória'] }
+        { title: 'Planos alimentares baseados no perfil do usuário', url: 'https://annyluz1-2026.github.io/nutrimuscle/', students: ['Anny Gabrielly','Carlos Alexandre','Felipe Gabriel','Kaio Miguel','Maria Eduarda','Pedro Matheus','Yasmim Victória'] }
       ] }
       ,
       { name: 'Escola de Programação para Jovens', projects: [
@@ -300,6 +300,7 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
 
 
