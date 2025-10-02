@@ -149,7 +149,7 @@ const classesData = [
       ] }
       ,
       { name: 'Escola de Programação para Jovens', projects: [
-        { title: 'Ensino de lógica de programação e desenvolvimento', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Cauã Fernando','Daniel','Jhonathan','Kayky','Marcela Kaillane'] }
+        { title: 'Ensino de lógica de programação e desenvolvimento', url: 'https://cauax777.github.io/grupo3/', students: ['Cauã Fernando','Daniel','Jhonathan','Kayky','Marcela Kaillane'] }
       ] }
     ]
   },
@@ -300,6 +300,7 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
 
 
