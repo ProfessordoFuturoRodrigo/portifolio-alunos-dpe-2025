@@ -102,7 +102,7 @@ const classesData = [
     turma: '2º B',
     teams: [
       { name: 'Plataforma de Bolsas de Estudo', projects: [
-        { title: 'Conexão de estudantes com oportunidades acadêmicas', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Danilo','Erycka','Gustavo','Laila Mireli'] }
+        { title: 'Conexão de estudantes com oportunidades acadêmicas', url: 'https://lailamireli-netizen.github.io/Bolsas-de-estudo-2B/', students: ['Danilo','Erycka','Gustavo','Laila Mireli'] }
       ]},
       { name: 'Papelaria Criativa', projects: [
         { title: 'Materiais escolares e personalizados', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Clara','Carlos Eduardo','Luys Felype','Maria Eduarda','Wagner'] }
@@ -114,7 +114,7 @@ const classesData = [
         { title: 'Criação de campanhas, SEO e redes sociais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Igo','Silver','Tony'] }
       ]},
       { name: 'Escola de Música Inclusiva', projects: [
-        { title: 'Ensino de música para pessoas com deficiência', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Elóah','Emilly','Rayanny'] }
+        { title: 'Ensino de música para pessoas com deficiência', url: 'https://e04ah.github.io/escola-de-musica-inclusiva-2-B/', students: ['Elóah','Emilly','Rayanny'] }
       ]}
     ]
   },
@@ -300,6 +300,7 @@ Organização de arquivos:
 - Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
 
 */
+
 
 
 
