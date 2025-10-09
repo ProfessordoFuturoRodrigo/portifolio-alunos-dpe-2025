@@ -1,313 +1,315 @@
-/* script.js - lógica para gerar a navegação e listar times/projetos
-   Editar o array `classesData` para adicionar/alterar turmas, times e projetos.
+/* script.js — versão limpa e corrigida
+   - Lê dados de dados_grupos.txt ou dados_individuais.txt (dependendo da página)
+   - Constrói estrutura consistente: array de turmas [{turma, teams:[{name, projects:[{title,url,students[]}]}]}]
+   - Renderiza navegação, lista de projetos, busca, filtro, modal, tooltips das logos e botão toggle
+   - Atenção: para testes locais use um servidor HTTP (ex.: python -m http.server)
 */
 
-const classesData = [
-  {
-    turma: '1º A',
-    teams: [
-      { name: 'Livraria Digital', projects: [
-        { title: 'Venda de e-books e audiolivros', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Paula','Dhovana','Larissa','Pedro Lucas','Talya'] },
-      ]},
-      { name: 'Agência de Turismo para PCDs', projects: [
-        { title: 'Roteiros acessíveis para pessoas com deficiência', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Cristina','Diêniffer','Helena','Henry','Kayon','Maria Vitória','Thiesa','Victor Ricardo'] }
-      ]},
-       { name: 'Startup de Economia Circular', projects: [
-        { title: 'Reaproveitamento e reciclagem de materiais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['PROJETO ABANDONADO!'] }
-      ] },
-       { name: 'Plataforma de Aulas para Surdos e Mudos', projects: [
-        { title: 'Educação em Libras', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Emilly Vitória','Heithor','Isabella','Kaique Antôny'] }
-      ] },
-       { name: 'Empresa de Desenvolvimento de Software', projects: [
-        { title: 'Aplicativos web e mobile', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Alexandre','Anny Luiza','Fhaitton','Hevellyn','Lucas Antônio','Luiz Felipe','Matheus'] }
-      ] },
-       { name: 'E-commerce de Produtos Veganos', projects: [
-        { title: 'Alimentação, cosméticos e roupas sem origem animal', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Alencar','Dyêmisson','Estefany'] }
-      ] }
-    ]
-  },
-    {
-    turma: '1º B',
-    teams: [
-      { name: 'Site para Ensino de Robótica Educacional', projects: [
-        { title: 'Cursos e kits para escolas e estudante', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Karolyna','Evelyn Karolline','Lara','Renan'] }
-      ] },
-      { name: 'Academia para Pessoas com Deficiência', projects: [
-        { title: 'Treinamento adaptado e acessibilidade', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anna Luiza','Anny Gabrielle','Maria Rita','Nycole','Sofia'] }
-      ] },
-      { name: 'Aplicativo de Rotinas Saudáveis', projects: [
-        { title: 'Exercícios, dieta e hidratação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['David Wesley','Lucas Felipe','Lucas Gabryel','Wallace'] }
-      ] },
-      { name: 'Projeto de Alfabetização para Adultos', projects: [
-        { title: 'Aulas online para ensino básico', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Luiza','Anny Stefanny','Marcela','Maria Paula','Tauane','Thaylla'] }
-      ] },
-      { name: 'Startup de Inteligência Artificial', projects: [
-        { title: 'Serviços de automação e IA', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Cloves','Felipe','Keven','Rafael','Yusseff Nattan'] }
-      ] },
-      { name: 'Espaço de Coworking Tecnológico', projects: [
-        { title: 'Localização de vagas para startups', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Bárbara','Thania','Warley'] }
-      ] },
-      { name: 'Loja de Roupas Sustentáveis', projects: [
-        { title: 'Moda ecológica e materiais recicláveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['PROJETO ABANDONADO!'] }
-      ] }
-    ]
-  },
-    {
-    turma: '1º C',
-    teams: [
-      { name: 'Consultoria em Cibersegurança', projects: [
-        { title: 'proteção de dados e segurança digital', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fernando','Luiz Felipe','Vinícius'] }
-      ]},
-      { name: 'Centro de Reforço Escolar Online', projects: [
-        { title: 'apoio em matemática, português e ciências', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Arthur','Erick','Geraldo','Gustavo','Lukas Gabriel','Murilo Max'] }
-      ]},
-      { name: 'Plataforma de Psicólogos Online', projects: [
-        { title: 'atendimento psicológico remoto', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Anna Beatriz','Fillipe Gabriel','Kayky','Thamili'] }
-      ]},
-      { name: 'Loja de Componentes Eletrônicos', projects: [
-        { title: 'venda de placas, sensores e microcontroladores', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Lucas José','Natália','Pedro Henrique'] }
-      ]},
-      { name: 'Loja de Equipamentos para Fotografia', projects: [
-        { title: 'câmeras, acessórios e iluminação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Amanda'] }
-      ]},
-      { name: 'Portal de Notícias Comunitárias', projects: [
-        { title: 'informações locais e jornalismo independente', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Fellipe','Lucas Lubachevski','Mauricio','Vyctor Augusto','Vytor'] }
-      ]},
-      { name: 'Loja de Brinquedos Educativos', projects: [
-        { title: 'para desenvolvimento infantil', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['João Vitor','Yana'] }
-      ]}
-    ]
-  },
-    {
-    turma: '2º A',
-    teams: [
-      { name: 'Empresa de Soluções em IoT (Internet das Coisas)', projects: [
-        { title: 'Automação residencial e industrial', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Elcio','Fernanda','Italo Ryan','Marcos','Ysabella'] }
-      ]},
-      { name: 'Pet Shop Online', projects: [
-        { title: 'Produtos e serviços para animais de estimação', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Heitor','Kauã','Marcos Rangel','Sidney'] }
-      ]},
-      { name: 'Plataforma de Cursos Online', projects: [
-        { title: 'EAD para cursos técnicos e profissionalizantes', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Danillo Cristian','Eduardo','José Rodolpho','Kayo Gabryel'] }
-      ]},
-      { name: 'Biblioteca Digital Comunitária', projects: [
-        { title: 'Acesso a livros gratuitos e acessíveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Clara','Davi','Izadora','Kawane','Nicolly'] }
-      ]},
-      { name: 'Clínica de Fisioterapia e Reabilitação', projects: [
-        { title: 'Atendimento especializado para idosos e atletas', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Luísa','Daniel','Geovanna Vitória','Tawany'] }
-      ]}
-    ]
-  },
-  {
-    turma: '2º B',
-    teams: [
-      { name: 'Plataforma de Bolsas de Estudo', projects: [
-        { title: 'Conexão de estudantes com oportunidades acadêmicas', url: 'https://lailamireli-netizen.github.io/Bolsas-de-estudo-2B/', students: ['Danilo','Erycka','Gustavo','Laila Mireli'] }
-      ]},
-      { name: 'Papelaria Criativa', projects: [
-        { title: 'Materiais escolares e personalizados', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Ana Clara','Carlos Eduardo','Luys Felype','Maria Eduarda','Wagner'] }
-      ]},
-      { name: 'Centro de Terapia Holística', projects: [
-        { title: 'Meditação, yoga e acupuntura', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Eduardo Góes','Fernando Felype'] }
-      ]},
-      { name: 'Agência de Marketing Digital', projects: [
-        { title: 'Criação de campanhas, SEO e redes sociais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Igo','Silver','Tony'] }
-      ]},
-      { name: 'Escola de Música Inclusiva', projects: [
-        { title: 'Ensino de música para pessoas com deficiência', url: 'https://e04ah.github.io/escola-de-musica-inclusiva-2-B/', students: ['Elóah','Emilly','Rayanny'] }
-      ]}
-    ]
-  },
-    {
-    turma: '2º C',
-    teams: [
-      { name: 'Centro de Estética e Cuidados Pessoais', projects: [
-        { title: 'Serviços de beleza e bem-estar', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Carlos Victor','Kaue Henrique','Osmar','Wilkner Felipe'] }
-      ]},
-      { name: 'Consultoria em Blockchain e Criptomoedas', projects: [
-        { title: 'Segurança e investimento em criptografia', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Daniel','Luiz','Pedro Henrique','Reminton','','','',''] }
-      ]},
-      { name: 'Loja de Cosméticos Naturais', projects: [
-        { title: 'Produtos orgânicos e ecológicos', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Gabriela','Kayky','Maria Eduarda','Pabline','Roberta Heloar','Ruan Gabriel'] }
-      ]},
-      { name: 'Escola de Idiomas para Baixa Renda', projects: [
-        { title: 'Aulas gratuitas ou a preços acessíveis', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Divino','Izabelly Maria','Wryel Kaio'] }
-      ]},
-      { name: 'Mercado de Produtos Orgânicos', projects: [
-        { title: 'Hortifrúti e produtos naturais', url: 'https://professordofuturorodrigo.github.io/em_constru-o/', students: ['Cibele','Jhully Emilly','Sthefany'] }
-      ]}
-    ]
-  },
-    {
-    turma: '3º A',
-    teams: [
-      { name: 'Clube de Assinatura de Café Artesanal', projects: [
-        { title: 'Envio mensal de cafés especiais', url: 'https://joaoolv25.github.io/Assinatura-de-caf-s-artesanais/', students: ['Carlos Eduardo','João Vitor','Luiz Gustavo','Pablo Pyetro','Samuel'] },
-      ]},
-      { name: 'Aplicativo de Nutrição Personalizada', projects: [
-        { title: 'Planos alimentares baseados no perfil do usuário', url: 'https://annyluz1-2026.github.io/nutrimuscle2/', students: ['Anny Gabrielly','Carlos Alexandre','Felipe Gabriel','Kaio Miguel','Maria Eduarda','Pedro Matheus','Yasmim Victória'] }
-      ] }
-      ,
-      { name: 'Escola de Programação para Jovens', projects: [
-        { title: 'Ensino de lógica de programação e desenvolvimento', url: 'https://cauax777.github.io/grupo3/', students: ['Cauã Fernando','Daniel','Jhonathan','Kayky','Marcela Kaillane'] }
-      ] }
-    ]
-  },
-  {
-    turma: '3º B',
-    teams: [
-      { name: 'Desenvolvedora de Games', projects: [
-        { title: 'Jogos para mobile, PC e consoles', url: 'https://sthefanebrito.github.io/Projeto-kitty-/', students: ['Carlos Júnior','Felype','Gabriel','Jamilly Vitória','Jean Matheus','Maria Luara','Marjory','Sthefane'] }
-      ] }
-      ,
-      { name: 'Portal de Ensino de Educação Financeira ', projects: [
-        { title: 'Conteúdo sobre investimentos e gestão financeira', url: 'https://theus450.github.io/Projeto-EvoCoin/', students: ['Daniel','Hericky','Matheus','Paulo Ricardo','Rayssa Thayná','Yasmim'] }
-      ] }
-    ]
+(() => {
+  'use strict';
+
+  /* ---------- elementos do DOM ---------- */
+  const classNav = document.getElementById('classNav');
+  const teamsContainer = document.getElementById('teamsContainer');
+  const turmaSelect = document.getElementById('turmaSelect');
+  const searchInput = document.getElementById('searchInput');
+  const modal = document.getElementById('projectModal');
+  const modalBody = document.getElementById('modalBody');
+  const closeModal = document.getElementById('closeModal');
+
+  const logoItems = document.querySelectorAll('.logo-item');
+  const logoDesc = document.getElementById('logoDesc');
+
+  const toggleProjects = document.getElementById('toggleProjects');
+
+  /* ---------- qual arquivo de dados usar ---------- */
+  const dataFile = window.location.pathname.includes('alunos.html')
+    ? 'dados_individuais.txt'
+    : 'dados_grupos.txt';
+
+  /* ---------- utilitários ---------- */
+  function safeSplit(line, sep = '|') {
+    // evita split quando linha vazia
+    return line.split(sep).map(s => s.trim());
   }
-];
 
-// Elementos
-const classNav = document.getElementById('classNav');
-const teamsContainer = document.getElementById('teamsContainer');
-const turmaSelect = document.getElementById('turmaSelect');
-const searchInput = document.getElementById('searchInput');
-const modal = document.getElementById('projectModal');
-const modalBody = document.getElementById('modalBody');
-const closeModal = document.getElementById('closeModal');
+  function normalizeUrl(url) {
+    if (!url || url === '#' || url.toLowerCase() === 'null') return '';
+    return url;
+  }
 
-// Inicializar navegação e select de turmas
-function init() {
-  classesData.forEach((c, i) => {
-    const btn = document.createElement('button');
-    btn.textContent = c.turma;
-    btn.dataset.index = i;
-    btn.addEventListener('click', () => { selectTurma(i); setActiveBtn(btn); });
-    classNav.appendChild(btn);
+  function parseStudentsField(field) {
+    if (!field) return [];
+    // se campo for "PROJETO ABANDONADO!" manter literal
+    if (field.trim().toUpperCase().includes('PROJETO')) return [field.trim()];
+    return field.split(',').map(s => s.trim()).filter(Boolean);
+  }
 
-    const opt = document.createElement('option');
-    opt.value = i; opt.textContent = c.turma;
-    turmaSelect.appendChild(opt);
-  });
+  /* ---------- carregar e converter dados do .txt ---------- */
+  async function carregarDados() {
+    try {
+      const res = await fetch(dataFile, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const txt = await res.text();
+      const linhas = txt.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
 
-  // mostrar todas as turmas por padrão
-  renderTeams(classesData);
-}
+      // converter para estrutura: [{turma, teams:[{name, projects:[{title,url,students[]}]}]}]
+      const mapaTurmas = new Map();
 
-function setActiveBtn(btn){
-  Array.from(classNav.children).forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-}
+      linhas.forEach((linha, idx) => {
+        // Ignorar linhas comentadas (# ou //)
+        if (linha.startsWith('#') || linha.startsWith('//')) return;
 
-function selectTurma(index){
-  renderTeams([classesData[index]]);
-  turmaSelect.value = index;
-}
+        const parts = safeSplit(linha, '|');
+        if (parts.length < 4) {
+          console.warn(`Linha ${idx + 1} ignorada (formato inválido):`, linha);
+          return;
+        }
 
-function renderTeams(list) {
-  teamsContainer.innerHTML = '';
-  if (!list || list.length === 0){ teamsContainer.innerHTML = '<p class="card">Nenhuma turma encontrada.</p>'; return; }
+        // Alguns arquivos (dados_individuais.txt) podem ter apenas 4 campos (sem lista de alunos)
+        const turma = parts[0] || 'Sem Turma';
+        const team = parts[1] || 'Sem Time';
+        const title = parts[2] || 'Sem Título';
+        const url = normalizeUrl(parts[3] || '');
+        const alunosField = parts[4] || ''; // pode estar vazio
 
-  // para cada turma, montar um bloco com seus times
-  list.forEach(t => {
-    const title = document.createElement('div');
-    title.className = 'card';
-    title.innerHTML = `<h2>Turma: ${t.turma}</h2>`;
-    teamsContainer.appendChild(title);
+        const students = parseStudentsField(alunosField);
 
-    t.teams.forEach(team => {
-      const teamDiv = document.createElement('article');
-      teamDiv.className = 'team';
-      teamDiv.innerHTML = `<h3>${team.name}</h3>`;
-
-      const ul = document.createElement('ul');
-      ul.className = 'project-list';
-      team.projects.forEach(p => {
-        const li = document.createElement('li');
-        li.className = 'project';
-        const linkText = p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : `<span>${p.title} <em>(Em desenvolvimento)</em></span>`;
-        li.innerHTML = `${linkText}<div class="meta">Autores: ${p.students.join(', ')}</div>`;
-        // mostrar detalhes em modal ao clicar em qualquer lugar do projeto
-        li.addEventListener('click', () => showProjectModal(p, team.name, t.turma));
-        ul.appendChild(li);
+        if (!mapaTurmas.has(turma)) mapaTurmas.set(turma, new Map());
+        const mapaTimes = mapaTurmas.get(turma);
+        if (!mapaTimes.has(team)) mapaTimes.set(team, []);
+        mapaTimes.get(team).push({ title, url, students });
       });
 
-      teamDiv.appendChild(ul);
-      teamsContainer.appendChild(teamDiv);
-    });
-  });
-}
-
-function showProjectModal(project, teamName, turma){
-  modalBody.innerHTML = `<h3>${project.title}</h3>
-    <p><strong>Turma:</strong> ${turma} — <strong>Time:</strong> ${teamName}</p>
-    <p><strong>Autores:</strong> ${project.students.join(', ')}</p>
-    <p><strong>Link:</strong> ${project.url ? `<a href="${project.url}" target="_blank" rel="noopener">Abrir projeto</a>` : 'Em desenvolvimento'}</p>`;
-  modal.classList.remove('hidden');
-}
-
-closeModal.addEventListener('click', ()=> modal.classList.add('hidden'));
-modal.addEventListener('click', (e)=>{ if (e.target === modal) modal.classList.add('hidden'); });
-
-// Busca simples
-searchInput.addEventListener('input', ()=>{
-  const q = searchInput.value.trim().toLowerCase();
-  if (!q) { renderTeams(classesDataFilteredBySelect()); return; }
-  const results = [];
-  classesData.forEach(c => {
-    const teams = [];
-    c.teams.forEach(team => {
-      const projects = team.projects.filter(p => {
-        return p.title.toLowerCase().includes(q) || p.students.join(' ').toLowerCase().includes(q) || team.name.toLowerCase().includes(q);
+      // transformar para array
+      const classesData = Array.from(mapaTurmas.entries()).map(([turma, mapaTimes]) => {
+        return {
+          turma,
+          teams: Array.from(mapaTimes.entries()).map(([name, projects]) => ({ name, projects }))
+        };
       });
-      if (projects.length) teams.push({ name: team.name, projects });
+
+      return classesData;
+    } catch (err) {
+      console.error('Erro ao carregar dados do arquivo:', err);
+      throw err;
+    }
+  }
+
+  /* ---------- renderização ---------- */
+  function renderClassNav(classesData) {
+    if (!classNav) return;
+    classNav.innerHTML = '';
+    classesData.forEach((c, i) => {
+      const btn = document.createElement('button');
+      btn.textContent = c.turma;
+      btn.type = 'button';
+      btn.dataset.index = i;
+      btn.addEventListener('click', () => {
+        renderTeams([classesData[i]]);
+        setActiveBtn(btn);
+        turmaSelect.value = i;
+      });
+      classNav.appendChild(btn);
     });
-    if (teams.length) results.push({ turma: c.turma, teams });
-  });
-  renderTeams(results);
-});
+  }
 
-// Filtrar por select
-turmaSelect.addEventListener('change', ()=>{
-  const v = turmaSelect.value;
-  if (v === '') { renderTeams(classesData); Array.from(classNav.children).forEach(b=>b.classList.remove('active')); return; }
-  renderTeams([classesData[v]]);
-  // marcar botão correspondente
-  const btn = Array.from(classNav.children).find(b=>b.dataset.index===String(v));
-  if (btn) setActiveBtn(btn);
-});
+  function populateTurmaSelect(classesData) {
+    if (!turmaSelect) return;
+    turmaSelect.innerHTML = '<option value="">Todas as turmas</option>';
+    classesData.forEach((c, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = c.turma;
+      turmaSelect.appendChild(opt);
+    });
+  }
 
-function classesDataFilteredBySelect(){
-  const v = turmaSelect.value;
-  return v === '' ? classesData : [classesData[v]];
-}
+  function setActiveBtn(btn) {
+    if (!classNav) return;
+    Array.from(classNav.children).forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
 
-// inicializar
-init();
+  function renderTeams(list) {
+    if (!teamsContainer) return;
+    teamsContainer.innerHTML = '';
+    if (!list || list.length === 0) {
+      teamsContainer.innerHTML = '<p class="card">Nenhuma turma encontrada.</p>';
+      return;
+    }
 
-/*
-Como personalizar:
-- Edite o array `classesData` acima para incluir todas as turmas (1º A ... 3º B) e os times.
-- Para cada projeto, preencha a URL quando o aluno publicar o site (p. ex. GitHub Pages, Netlify, Vercel ou pasta no servidor da escola).
-- A página principal (index.html) já contém a apresentação do professor e as instruções.
+    list.forEach(t => {
+      const title = document.createElement('div');
+      title.className = 'card';
+      title.innerHTML = `<h2>Turma: ${escapeHtml(t.turma)}</h2>`;
+      teamsContainer.appendChild(title);
 
-Sugestões de publicação dos projetos dos alunos:
-- GitHub Pages (cada aluno cria um repositório com página pública)
-- Netlify / Vercel - deploys gratuitos de sites estáticos
-- Pastas públicas no servidor da escola: https://escola.edu.br/projetos/aluno
+      t.teams.forEach(team => {
+        const teamDiv = document.createElement('article');
+        teamDiv.className = 'team';
+        teamDiv.innerHTML = `<h3>${escapeHtml(team.name)}</h3>`;
 
-Organização de arquivos:
-- Coloque index.html, styles.css e script.js na mesma pasta (por exemplo `portfolio/`) e abra `index.html` no navegador.
+        const ul = document.createElement('ul');
+        ul.className = 'project-list';
 
-*/
+        team.projects.forEach(p => {
+          const li = document.createElement('li');
+          li.className = 'project';
 
+          const safeUrl = p.url ? p.url : '';
+          const linkText = safeUrl
+            ? `<a href="${escapeAttr(safeUrl)}" target="_blank" rel="noopener">${escapeHtml(p.title)}</a>`
+            : `<span>${escapeHtml(p.title)} <em>(Em desenvolvimento)</em></span>`;
 
+          const authors = (p.students && p.students.length) ? p.students.join(', ') : 'Sem autores informados';
+          li.innerHTML = `${linkText}<div class="meta">Autores: ${escapeHtml(authors)}</div>`;
 
+          li.addEventListener('click', () => showProjectModal(p, team.name, t.turma));
+          ul.appendChild(li);
+        });
 
+        teamDiv.appendChild(ul);
+        teamsContainer.appendChild(teamDiv);
+      });
+    });
+  }
 
+  function showProjectModal(project, teamName, turma) {
+    if (!modalBody || !modal) return;
+    const authors = (project.students && project.students.length) ? project.students.join(', ') : 'Sem autores informados';
+    modalBody.innerHTML = `<h3>${escapeHtml(project.title)}</h3>
+      <p><strong>Turma:</strong> ${escapeHtml(turma)} — <strong>Time:</strong> ${escapeHtml(teamName)}</p>
+      <p><strong>Autores:</strong> ${escapeHtml(authors)}</p>
+      <p><strong>Link:</strong> ${project.url ? `<a href="${escapeAttr(project.url)}" target="_blank" rel="noopener">Abrir projeto</a>` : 'Em desenvolvimento'}</p>`;
+    modal.classList.remove('hidden');
+  }
 
+  /* ---------- busca e filtro ---------- */
+  function attachSearchAndFilter(classesData) {
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.trim().toLowerCase();
+        if (!q) { renderTeams(classesDataFilteredBySelect(classesData)); return; }
+        const results = [];
 
+        classesData.forEach(c => {
+          const teams = [];
+          c.teams.forEach(team => {
+            const projects = team.projects.filter(p => {
+              const title = (p.title || '').toLowerCase();
+              const students = (p.students || []).join(' ').toLowerCase();
+              const teamName = (team.name || '').toLowerCase();
+              return title.includes(q) || students.includes(q) || teamName.includes(q);
+            });
+            if (projects.length) teams.push({ name: team.name, projects });
+          });
+          if (teams.length) results.push({ turma: c.turma, teams });
+        });
 
+        renderTeams(results);
+      });
+    }
 
+    if (turmaSelect) {
+      turmaSelect.addEventListener('change', () => {
+        const v = turmaSelect.value;
+        if (v === '') {
+          renderTeams(classesData);
+          Array.from(classNav.children).forEach(b => b.classList.remove('active'));
+          return;
+        }
+        const idx = Number(v);
+        if (!Number.isNaN(idx) && classesData[idx]) {
+          renderTeams([classesData[idx]]);
+          const btn = Array.from(classNav.children).find(b => b.dataset.index === String(idx));
+          if (btn) setActiveBtn(btn);
+        }
+      });
+    }
 
+    function classesDataFilteredBySelect(data) {
+      const v = turmaSelect ? turmaSelect.value : '';
+      return v === '' ? data : [data[Number(v)]];
+    }
+  }
 
+  /* ---------- logo tooltips ---------- */
+  function attachLogoHover() {
+    if (!logoItems || !logoDesc) return;
+    logoItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const txt = item.dataset.desc || '';
+        logoDesc.textContent = txt;
+        logoDesc.classList.add('show');
+      });
+      item.addEventListener('mouseleave', () => {
+        logoDesc.classList.remove('show');
+      });
+    });
+  }
+
+  /* ---------- modal close handlers ---------- */
+  function attachModalHandlers() {
+    if (!closeModal || !modal) return;
+    closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
+  }
+
+  /* ---------- toggle entre páginas ---------- */
+  function attachToggleButton() {
+    if (!toggleProjects) return;
+    toggleProjects.addEventListener('click', () => {
+      const currentPage = window.location.pathname;
+      if (currentPage.includes('alunos.html')) {
+        window.location.href = 'index.html';
+      } else {
+        window.location.href = 'alunos.html';
+      }
+    });
+  }
+
+  /* ---------- escape helpers - evitar injeção simples ---------- */
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
+  function escapeAttr(str) {
+    if (!str) return '';
+    return String(str).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  /* ---------- inicialização principal ---------- */
+  async function start() {
+    try {
+      const classesData = await carregarDados();
+      if (!classesData || classesData.length === 0) {
+        teamsContainer.innerHTML = '<p class="card">Nenhum projeto encontrado no arquivo de dados.</p>';
+        return;
+      }
+
+      // renderizar
+      renderClassNav(classesData);
+      populateTurmaSelect(classesData);
+      renderTeams(classesData); // todas as turmas
+      attachSearchAndFilter(classesData);
+      attachLogoHover();
+      attachModalHandlers();
+      attachToggleButton();
+    } catch (err) {
+      // Exibir mensagem amigável para o professor
+      teamsContainer.innerHTML = `<p class="card">Não foi possível carregar os projetos. Verifique se o arquivo <code>${dataFile}</code> existe, está na mesma pasta e está sendo servido por HTTP (não via file://). Erro: ${escapeHtml(String(err.message || err))}</p>`;
+    }
+  }
+
+  /* ---------- iniciar após DOM pronto ---------- */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+
+})();
