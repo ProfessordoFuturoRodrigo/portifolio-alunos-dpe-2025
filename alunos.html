@@ -1,11 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alunos DPE</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Olá mundo! Eu sou o Rodrigo.</h1>
+  <header class="site-header">
+    <div class="container">
+      <div class="logos">
+        <div class="logo-item" data-desc="EFG José Luiz Bittencourt">
+          <img src="logo_efg.png" alt="Logo EFG">
+        </div>
+        <div class="logo-item" data-desc="CEPI Divíno Pai Eterno - Trindade - GO">
+          <img src="logoCEPI2018.jfif" alt="Logo CEPI">
+        </div>
+        <div class="logo-item" data-desc="Governo do Estado de Goiás — Secretaria de Educação">
+          <img src="Brasao_Estado_Goias-8cc.png" alt="Governo de Goiás">
+        </div>
+
+        <!-- Div de descrição dinâmica -->
+        <div class="logo-desc" id="logoDesc">Passe o mouse sobre as logomarcas</div>
+      </div>
+
+      <h1>Prof. Rodrigo — Portfólio dos Alunos</h1>
+      <p class="lead">Curso Técnico em Desenvolvimento Web e Cibersegurança — Apresentação dos trabalhos por turma e
+        times.</p>
+      <div class="toggle-view">
+        <button id="toggleProjects" class="toggle-btn">👥 Ver Projetos em Grupo</button>
+      </div>
+      <nav class="class-nav" id="classNav" aria-label="Navegação por turmas"></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>Apresentação</h2>
+      <p>Olá — sou Rodrigo, professor do curso Técnico em Desenvolvimento Web e Cibersegurança. Este site reúne os
+        projetos dos alunos organizados por turma e por times. Use a navegação acima para escolher a turma e clique nos
+        times para ver os sites e portfólios.</p>
+      <p>Instruções rápidas: cada trabalho possui título, autores e link. Caso o link ainda não esteja publicado, ficará
+        como "Em desenvolvimento".</p>
+    </section>
+
+    <section id="controls" class="controls">
+      <label for="searchInput">Buscar projeto / aluno:</label>
+      <input id="searchInput" placeholder="Ex.: jogo, site da escola, João" />
+      <select id="turmaSelect" aria-label="Filtrar por turma">
+        <option value="">Todas as turmas</option>
+      </select>
+    </section>
+
+    <section id="teamsContainer"></section>
+
+    <section id="projectModal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <button id="closeModal" class="close">×</button>
+        <div id="modalBody"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Rodrigo — Curso Técnico em Desenvolvimento Web e Cibersegurança</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
