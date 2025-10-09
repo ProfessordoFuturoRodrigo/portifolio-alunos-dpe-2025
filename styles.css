@@ -1,34 +1,176 @@
 /* styles.css - estilo simples e responsivo */
-:root{
-  --bg:#f7f8fb; --card:#fff; --accent:#0f62fe; --muted:#666;
-  --radius:12px; --gap:16px; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+:root {
+  --bg: #f7f8fb;
+  --card: #fff;
+  --accent: #0f62fe;
+  --muted: #666;
+  --radius: 12px;
+  --gap: 16px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:#222}
-.container{max-width:1100px;margin:0 auto;padding:20px}
-.site-header{background:linear-gradient(90deg,#eaf2ff,#fff);padding:28px 0;border-bottom:1px solid #e6eefc}
-.site-header h1{margin:0;font-size:1.6rem}
-.lead{margin:6px 0 0;color:var(--muted)}
-.class-nav{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-.class-nav button{background:transparent;border:1px solid #d6e6ff;padding:8px 10px;border-radius:8px;cursor:pointer}
-.class-nav button.active{background:var(--accent);color:#fff;border-color:transparent}
-.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.06);margin-bottom:16px}
-.controls{display:flex;gap:12px;align-items:center;margin-bottom:16px}
-.controls input, .controls select{flex:1;padding:8px;border-radius:8px;border:1px solid #ddd}
-#teamsContainer{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.team{background:var(--card);padding:12px;border-radius:10px;border:1px solid #eee}
-.team h3{margin:0 0 8px}
-.project-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.project{padding:8px;border-radius:8px;border:1px dashed #e9eef7}
-.project a{font-weight:600;text-decoration:none}
-.project .meta{font-size:0.9rem;color:var(--muted)}
-.site-footer{padding:18px 0;text-align:center;color:var(--muted)}
-.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);}
-.modal.hidden{display:none}
-.modal-content{background:var(--card);padding:16px;border-radius:12px;max-width:680px;width:90%;position:relative}
-.close{position:absolute;right:8px;top:8px;border:none;background:transparent;font-size:1.4rem;cursor:pointer}
 
-@media (max-width:600px){.controls{flex-direction:column;align-items:stretch}}
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #222
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px
+}
+
+.site-header {
+  background: linear-gradient(90deg, #eaf2ff, #fff);
+  padding: 28px 0;
+  border-bottom: 1px solid #e6eefc
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.6rem
+}
+
+.lead {
+  margin: 6px 0 0;
+  color: var(--muted)
+}
+
+.class-nav {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px
+}
+
+.class-nav button {
+  background: transparent;
+  border: 1px solid #d6e6ff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer
+}
+
+.class-nav button.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  margin-bottom: 16px
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px
+}
+
+.controls input,
+.controls select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd
+}
+
+#teamsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px
+}
+
+.team {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #eee
+}
+
+.team h3 {
+  margin: 0 0 8px
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px
+}
+
+.project {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px dashed #e9eef7
+}
+
+.project a {
+  font-weight: 600;
+  text-decoration: none
+}
+
+.project .meta {
+  font-size: 0.9rem;
+  color: var(--muted)
+}
+
+.site-footer {
+  padding: 18px 0;
+  text-align: center;
+  color: var(--muted)
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal.hidden {
+  display: none
+}
+
+.modal-content {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  max-width: 680px;
+  width: 90%;
+  position: relative
+}
+
+.close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer
+}
+
+@media (max-width:600px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch
+  }
+}
 
 /* Estilo das logos no cabeçalho */
 .logos {
@@ -49,3 +191,90 @@ body{margin:0;background:var(--bg);color:#222}
 .logos img:hover {
   transform: scale(1.08);
 }
+
+/* Container das logos */
+.logos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* Cada logo individual */
+.logo-item {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.logo-item img {
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Caixa de descrição lateral */
+.logo-desc {
+  position: absolute;
+  right: -1px; /* posição à direita das logos */
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--card);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  width: 300px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-desc.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 800px) {
+  .logo-desc {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+/* Botão de alternância entre modos */
+.toggle-view {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.toggle-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #0947b7;
+  transform: scale(1.05);
+}
+
