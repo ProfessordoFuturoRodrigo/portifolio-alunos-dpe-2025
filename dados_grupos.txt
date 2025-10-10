@@ -1,4 +1,4 @@
-1º A|Livraria Digital|Venda de e-books e audiolivros|https://professordofuturorodrigo.github.io/em_constru-o/|Ana Paula, Dhovana, Larissa, Pedro Lucas, Talya
+1º A|Livraria Digital|Venda de e-books e audiolivros|#Link|Ana Paula, Dhovana, Larissa, Pedro Lucas, Talya
 1º A|Agência de Turismo para PCDs|Roteiros acessíveis para pessoas com deficiência|https://professordofuturorodrigo.github.io/em_constru-o/|Ana Cristina, Diêniffer, Helena, Henry, Kayon, Maria Vitória, Thiesa, Victor Ricardo
 1º A|Startup de Economia Circular|Reaproveitamento e reciclagem de materiais|https://professordofuturorodrigo.github.io/em_constru-o/|PROJETO ABANDONADO!
 1º A|Plataforma de Aulas para Surdos e Mudos|Educação em Libras|https://professordofuturorodrigo.github.io/em_constru-o/|Emilly Vitória, Heithor, Isabella, Kaique Antôny
@@ -45,3 +45,4 @@
 
 3º B|Desenvolvedora de Games|Jogos para mobile, PC e consoles|https://sthefanebrito.github.io/Projeto-kitty-/|Carlos Júnior, Felype, Gabriel, Jamilly Vitória, Jean Matheus, Maria Luara, Marjory, Sthefane
 3º B|Portal de Ensino de Educação Financeira|Conteúdo sobre investimentos e gestão financeira|https://theus450.github.io/Projeto-EvoCoin/|Daniel, Hericky, Matheus, Paulo Ricardo, Rayssa Thayná, Yasmim
+
