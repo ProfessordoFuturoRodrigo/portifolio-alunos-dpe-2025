@@ -3,7 +3,7 @@
 1º A|Ana Cristina|Título|#Link|Autor(es)
 1º A|Ana Júlia|Título|#Link|Autor(es)
 1º A|Ana Paula|Título|#Link|Autor(es)
-1º A|Anny|Título|#Link|Autor(es)
+1º A|Anny|Título|https://annylu1z4.github.io/Site-Individual/|Anny
 1º A|Dhovana|Título|#Link|Autor(es)
 1º A|Diêniffer|Título|#Link|Autor(es)
 1º A|Dyêmisson|Título|#Link|Autor(es)
@@ -14,7 +14,7 @@
 1º A|Heithor|Título|#Link|Autor(es)
 1º A|Helena|Título|#Link|Autor(es)
 1º A|Henry|Título|#Link|Autor(es)
-1º A|Hevellyn|Título|#Link|Autor(es)
+1º A|Hevellyn|Título|https://hevellynsouzaarntes16.github.io/site-individual/|Hevellyn
 1º A|Isabella|Título|#Link|Autor(es)
 1º A|Kaique|Título|#Link|Autor(es)
 1º A|Kayon|Título|#Link|Autor(es)
@@ -28,11 +28,11 @@
 1º A|Pedro Lucas|Título|#Link|Autor(es)
 1º A|Rafael|Título|#Link|Autor(es)
 1º A|Talya|Título|#Link|Autor(es)
-1º A|Thiesa|Título|#Link|Autor(es)
+1º A|Thiesa|Simulação de IA|https://thiesasousa-lab.github.io/thiessa-raiane-/|Thiesa
 1º A|Victor|Título|#Link|Autor(es)
 
 1º B|Ana Karolyna|Título|#Link|Autor(es)
-1º B|Ana Luiza|Título|#Link|Autor(es)
+1º B|Ana Luiza|Título|https://analuizabarbosa7-hue.github.io/grupo-4/|Ana Luiza
 1º B|Anna Luiza|Título|#Link|Autor(es)
 1º B|Anny Gabrielle|Título|#Link|Autor(es)
 1º B|Anny Stefanny|Título|#Link|Autor(es)
@@ -56,10 +56,10 @@
 1º B|Rafael Joaquim|Título|#Link|Autor(es)
 1º B|Renan|Título|#Link|Autor(es)
 1º B|Sofia|Título|#Link|Autor(es)
-1º B|Tauane|Título|#Link|Autor(es)
+1º B|Tauane|Título|https://tauane-ai.github.io/jogos-cepi/|Tauane
 1º B|Thania|Título|#Link|Autor(es)
 1º B|Thaylla|Título|#Link|Autor(es)
-1º B|Wallace|Título|#Link|Autor(es)
+1º B|Wallace|Título|https://wallacelimasouza-ai.github.io/meuprimeirosite/|Wallace
 1º B|Warley|Título|#Link|Autor(es)
 1º B|Yusseff|Título|#Link|Autor(es)
 
@@ -205,4 +205,5 @@
 3º B|Paulo|Título|#Link|Autor(es)
 3º B|Rayssa|Título|#Link|Autor(es)
 3º B|Sthefane|Título|#Link|Autor(es)
+
 3º B|Yasmin|Título|#Link|Autor(es)
